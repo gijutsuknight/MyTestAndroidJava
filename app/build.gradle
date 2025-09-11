@@ -16,8 +16,20 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        release {
+            storeFile file('release.keystore')
+            storePassword '' // Fill in the storePassword, this shouldn't be pushed to the git
+            keyAlias 'mytestandroidjava-release-key'
+            keyPassword '' // Fill in the keyPassword, this shouldn't be pushed to the git
+        }
+    }
+
+
+
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
