@@ -6,6 +6,10 @@ android {
     namespace 'my.test.androidjava'
     compileSdk 35
 
+    buildFeatures {
+        buildConfig = true
+    }
+
     defaultConfig {
         applicationId "my.test.androidjava"
         minSdk 29
@@ -18,7 +22,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file('release.keystore')
+            storeFile file('release.jks')
             storePassword '' // Fill in the storePassword, this shouldn't be pushed to the git
             keyAlias 'mytestandroidjava-release-key'
             keyPassword '' // Fill in the keyPassword, this shouldn't be pushed to the git

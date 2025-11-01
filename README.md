@@ -10,5 +10,5 @@
 
 # Generate Keystore
 ```agsl
-keytool -genkey -v -keystore release.keystore -keyalg RSA -keysize 2048 -validity 10000 -alias mytestandroidjava-release-key
+keytool -genkey -v -keystore release.jks -keyalg RSA -keysize 2048 -validity 10000 -alias mytestandroidjava-release-key
 ```
