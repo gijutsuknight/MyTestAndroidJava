@@ -36,5 +36,12 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, BrowserActivity.class);
             startActivity(intent);
         });
+
+        // Set up device info button
+        Button deviceInfoButton = findViewById(R.id.deviceInfoButton);
+        deviceInfoButton.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, DeviceInfoActivity.class);
+            startActivity(intent);
+        });
     }
 }

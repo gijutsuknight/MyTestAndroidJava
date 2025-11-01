@@ -26,6 +26,9 @@
         <activity
             android:name=".BrowserActivity"
             android:exported="false" />
+        <activity
+            android:name=".DeviceInfoActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
